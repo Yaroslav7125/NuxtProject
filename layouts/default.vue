@@ -117,25 +117,6 @@
 a{
   text-decoration: none;
 }
-.sph-link{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.015em;
-  color: #6E7178;
-}
-.fph-span{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  color: #2D2F33;
-}
 .link span{
   font-family: Roboto;
   font-style: normal;
@@ -144,6 +125,9 @@ a{
   line-height: 20px;
   letter-spacing: 0.015em;
   color: #6E7178;
+}
+.link:hover span{
+   color: #2375E1;
 }
 
 </style>
