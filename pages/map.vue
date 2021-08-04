@@ -1,51 +1,33 @@
 <template>
-  <div id="container" />
+  <div>
+    <div id="map"></div>
+  </div>
+
 </template>
 
 <script>
-import { load } from '@2gis/mapgl';
+import { Loader } from "@googlemaps/js-api-loader"
 export default {
-
-  data() {
-    return {
-      currentLocation: {},
-      circleOptions: {
-
-      },
-      locations: [
-        {
-          lat: 44.933076,
-          lng: 15.629058
-        },
-      ],
-      pins: {
-        selected: "data:image/png;base64,iVBORw0KGgo...",
-        notSelected: "data:image/png;base64,iVBORw0KGgo..."
-      },
-      mapStyle: [],
-      clusterStyle: [
-        {
-          url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png",
-          width: 56,
-          height: 56,
-          textColor: "#fff"
-        }
-      ]
-    }
-  },
-  mounted:function(){
-    console.log('mount')
-    navigator.geolocation.getCurrentPosition((pos)=>{
-      debugger
-      this.locations[0].lat = pos.coords.latitude;
-      this.locations[0].lng = pos.coords.longitude;
-    }, (err) => {
-      debugger
+  mounted() {
+    const loader = new Loader({
+      apiKey: "AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU",
+      version: "weekly",
+    });
+    loader.load().then(() => {
+       map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
     });
   }
 }
+
+
 </script>
 
 <style>
-
+#map{
+  width: 1000px;
+  height: 1000px;
+}
 </style>

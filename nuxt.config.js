@@ -50,10 +50,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    ['nuxt-gmaps', {
-      key: 'AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU',
-      //you can use libraries: ['places']
-    }]
+
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
