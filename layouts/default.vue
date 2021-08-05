@@ -12,26 +12,26 @@
   </div>
   <div class="d-flex justify-content-between second-part-h">
     <div class="first-part d-flex  ">
-      <nuxt-link exact active-class="active" to="/">
+      <nuxt-link exact no-prefetch active-class="active" to="/">
         <div class="link link-sph">
           <img src="@/static/img/Activity.svg" alt="">
           <span class="sph-link">Activity</span>
         </div>
       </nuxt-link>
-      <nuxt-link active-class="active" to="/map">
+      <nuxt-link no-prefetch active-class="active" to="/map">
         <div class="link link-sph">
           <img src="@/static/img/Calendar.svg" alt="">
           <span class="sph-link">Map</span>
         </div>
       </nuxt-link>
 
-      <nuxt-link  active-class="active" to="/time">
+      <nuxt-link no-prefetch active-class="active" to="/time">
         <div class="link link-sph">
           <img src="@/static/img/Gear.svg" alt="">
           <span class="sph-link">Time</span>
         </div>
       </nuxt-link>
-      <nuxt-link  active-class="active" to="/todo">
+      <nuxt-link no-prefetch active-class="active" to="/todo">
         <div class="link link-sph">
           <img src="@/static/img/List.svg" alt="">
           <span class="sph-link">Todo list</span>
