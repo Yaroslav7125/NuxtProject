@@ -6,50 +6,48 @@
           <span>Basic map</span>
           <img src="@/static/img/UpStroke.svg" alt="">
         </div>
-
       </div>
       <div id="map"></div>
-
     </div>
   </div>
 </template>
 
 <script>
-import { Loader } from "@googlemaps/js-api-loader"
+import { Loader } from '@googlemaps/js-api-loader'
 export default {
-  data(){
-    return{
-      map:Object,
+  data () {
+    return {
+      map: Object
     }
   },
-  mounted() {
+  mounted () {
     const loader = new Loader({
-      apiKey: "AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU",
-      version: "weekly",
-    });
-    loader.load().then(() => {
-        this.map = new google.maps.Map(document.getElementById("map"), {
+      apiKey: 'AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU',
+      version: 'weekly'
+    })
+    loader.load().then(() => { // eslint-disable-next-line
+      this.map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },
-        zoom: 17,
-      });
-      navigator.geolocation.getCurrentPosition((pos)=>{
-        let crd = pos.coords;
+        zoom: 17
+      })
+      navigator.geolocation.getCurrentPosition((pos) => {
+        const crd = pos.coords
         this.map.setCenter({
-          lat:crd.latitude,
-          lng:crd.longitude,
+          lat: crd.latitude,
+          lng: crd.longitude
         })
-        const marker = new google.maps.Marker({
+        // eslint-disable-next-line
+        new google.maps.Marker({
           position: {
-            lat:crd.latitude,
-            lng:crd.longitude,
+            lat: crd.latitude,
+            lng: crd.longitude
           },
-          map: this.map,
+          map: this.map
         })
-      });
-    });
-  },
+      })
+    })
+  }
 }
-
 
 </script>
 
@@ -60,8 +58,6 @@ export default {
 }
 .content-container{
   padding: 16px;
-
-
 
 }
 .map-box{

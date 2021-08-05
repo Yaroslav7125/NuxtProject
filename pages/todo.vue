@@ -26,56 +26,55 @@ export default {
   name: 'App',
   components: {
     TodoList,
-    AddTodo,
+    AddTodo
   },
-  data() {
+  data () {
     return {
       todos: [
-        { id:1,title:'купить хлеп', completed: false},
-        { id:2,title:'купить матрас', completed: false},
-        { id:3,title:'купить сено', completed: false},
+        { id: 1, title: 'купить хлеп', completed: false },
+        { id: 2, title: 'купить матрас', completed: false },
+        { id: 3, title: 'купить сено', completed: false }
       ],
-      userInput: '',
+      userInput: ''
     }
   },
   methods: {
-    saveTodos() {
-      localStorage.setItem('todos', JSON.stringify(this.todos));
+    saveTodos () {
+      localStorage.setItem('todos', JSON.stringify(this.todos))
     },
-    PushTodo(newTodo) {
-      this.todos.push(newTodo);
+    PushTodo (newTodo) {
+      this.todos.push(newTodo)
       this.saveTodos() // сетим в local Storage
     },
-    deleteTodo(id) {
-      this.todos = this.todos.filter(t => t.id !== id);
-      this.saveTodos(); //сетим в local Storage
+    deleteTodo (id) {
+      this.todos = this.todos.filter(t => t.id !== id)
+      this.saveTodos() // сетим в local Storage
     },
-    ChangeTodoCompleted(index) {
-      this.todos[index].completed = !this.todos[index].completed;
-      this.saveTodos(); // сетим при изм completed
+    ChangeTodoCompleted (index) {
+      this.todos[index].completed = !this.todos[index].completed
+      this.saveTodos() // сетим при изм completed
     },
-    changeTodoTitle(index, StrTitle){
-      this.todos[index].title = StrTitle;
-      this.saveTodos();// сетим при изменении title
+    changeTodoTitle (index, StrTitle) {
+      this.todos[index].title = StrTitle
+      this.saveTodos()// сетим при изменении title
     }
   },
 
   computed: {
     filteredTodos: function () {
-
       if (this.userInput != '') {
         return this.todos.filter(t => t.title.includes(this.userInput))
       } else {
-        return this.todos;
+        return this.todos
       }
-    },
+    }
   },
   mounted: function () {
+    // eslint-disable-next-line no-lone-blocks
     {
-      if (JSON.parse(localStorage.getItem("todos"))) {
-        this.todos = JSON.parse(localStorage.getItem("todos"));// читаем
-      }
-      else localStorage.setItem('todos', JSON.stringify(this.todos));
+      if (JSON.parse(localStorage.getItem('todos'))) {
+        this.todos = JSON.parse(localStorage.getItem('todos'))// читаем
+      } else localStorage.setItem('todos', JSON.stringify(this.todos))
     }
   }
 }

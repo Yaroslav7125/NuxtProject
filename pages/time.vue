@@ -16,13 +16,13 @@
 
 <script>
 export default {
-  computed:{
-    getTime:function(){
-      let sec = this.$store.state.time;
-      let secStr = String(sec%60).padStart(2, '0');
-      let minutesStr = String(Math.trunc(sec/60)).padStart(2, '0');
-      let hoursStr = String(Math.trunc(sec/3600)).padStart(2, '0');
-      return `${hoursStr}:${minutesStr}:${secStr}`;
+  computed: {
+    getTime: function () {
+      const sec = this.$store.state.time
+      const secStr = String(sec % 60).padStart(2, '0')
+      const minutesStr = String(Math.trunc(sec / 60)).padStart(2, '0')
+      const hoursStr = String(Math.trunc(sec / 3600)).padStart(2, '0')
+      return `${hoursStr}:${minutesStr}:${secStr}`
     }
   }
 }

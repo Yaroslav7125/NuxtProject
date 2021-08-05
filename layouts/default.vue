@@ -66,10 +66,10 @@
 
 <script>
 
-export default{
-  mounted:function(){
-    this.$store.dispatch("startTimer");    /// запуск таймера
-  },
+export default {
+  mounted: function () {
+    this.$store.dispatch('startTimer') /// запуск таймера
+  }
 
 }
 </script>
@@ -137,4 +137,3 @@ a{
 }
 
 </style>
-

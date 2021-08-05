@@ -8,35 +8,35 @@
     </div>
 </template>
 <script>
-export default{
-  props:{
-    userInput:String,
+export default {
+  props: {
+    userInput: String
   },
-  data(){
-        return{
-            valueTodo:'',
+  data () {
+    return {
+      valueTodo: ''
+    }
+  },
+  methods: {
+    createTodo () {
+      if (this.valueTodo) {
+        const NewTodo = {
+          id: Date.now(),
+          title: this.valueTodo,
+          completed: false
         }
-  },
-  methods:{
-        createTodo(){
-            if(this.valueTodo){
-                const NewTodo = {
-                    id:Date.now(),
-                    title:this.valueTodo,
-                    completed:false,
-                }
-                this.$emit('addTodo', NewTodo);
-            } 
-            this.valueTodo='';
-        },
-  },
+        this.$emit('addTodo', NewTodo)
+      }
+      this.valueTodo = ''
+    }
+  }
 }
 </script>
 <style scoped>
 .container{
-    display: flex;  
+    display: flex;
     justify-content: center;
-  
+
 }
 .container-inner{
     display: flex;

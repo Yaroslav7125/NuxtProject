@@ -8,9 +8,9 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
-    script:[
+    script: [
       {
-        src:'https://maps.api.2gis.ru/2.0/loader.js?pkg=full&lazy=true'
+        src: 'https://maps.api.2gis.ru/2.0/loader.js?pkg=full&lazy=true'
       }
     ],
     meta: [
@@ -21,8 +21,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"},
-
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap' }
 
     ]
   },
@@ -32,7 +31,7 @@ export default {
     'bootstrap/dist/css/bootstrap.min.css',
     '~/static/css/main.css',
     '~/static/css/font1.css',
-    '~/static/css/font2.css',
+    '~/static/css/font2.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -45,7 +44,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    //'@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

@@ -13,28 +13,28 @@
 </template>
 
 <script>
-export default{
-    props:['todo', 'index'],
-    data(){
-        return{
-          editTodo:false,
-        }
-    },
-    methods:{
-        ChangeEditTodos(){
-          this.editTodo= !this.editTodo;
-          this.$emit('ChangeTodo');
-        },
-        changeCompleted(){
-          this.$emit('ChangeTodoCompleted', this.index);
-        },
-        changeTodoTitle(StrTitle){
-          this.$emit('changeTodoTitle', this.index, StrTitle)
-        },
-        deleteTodo(){
-          this.$emit('deleteTodo', this.todo.id)
-        }
+export default {
+  props: ['todo', 'index'],
+  data () {
+    return {
+      editTodo: false
     }
+  },
+  methods: {
+    ChangeEditTodos () {
+      this.editTodo = !this.editTodo
+      this.$emit('ChangeTodo')
+    },
+    changeCompleted () {
+      this.$emit('ChangeTodoCompleted', this.index)
+    },
+    changeTodoTitle (StrTitle) {
+      this.$emit('changeTodoTitle', this.index, StrTitle)
+    },
+    deleteTodo () {
+      this.$emit('deleteTodo', this.todo.id)
+    }
+  }
 }
 </script>
 
