@@ -50,7 +50,6 @@
                   <img src="@/static/img/right_stroke.svg" alt="">
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -62,9 +61,7 @@
             <img src="@/static/img/DownStroke.svg" alt="">
           </div>
         </div>
-
       </div>
-
       <div class="main-screen-second-part d-flex flex-column ">
         <div class="personal-card d-flex flex-column align-items-center">
           <img src="@/static/img/pain.svg" alt="">
@@ -86,21 +83,34 @@
               <img src="@/static/img/User.svg" alt="">
               <span>My profile</span>
             </div>
-            <div class="nav-list-item">
-              <img src="@/static/img/User.svg" alt="">
-              <span>Balance</span>
+            <div class="nav-list-item d-flex align-content-center justify-content-between">
+              <div class=" d-flex align-content-center">
+                <img src="@/static/img/User.svg" alt="">
+                <span>Balance</span>
+              </div>
+              <span class="nav-list-price">$1,456</span>
             </div>
-            <div class="nav-list-item">
-              <img src="@/static/img/User.svg" alt="">
-              <span>Connections</span>
+            <div class="nav-list-item d-flex justify-content-between">
+              <div class="nav-list-item-fp d-flex align-content-center">
+                <img src="@/static/img/User.svg" alt="">
+                <span>Connections</span>
+              </div>
+              <div class="connections-count  d-flex justify-content-between align-content-center">
+                47
+              </div>
             </div>
             <div class="nav-list-item hr-line">
               <img src="@/static/img/User.svg" alt="">
               <span>Friends</span>
             </div>                             <!-- connections and account settings -->
-            <div class="nav-list-item">
-              <img src="@/static/img/User.svg" alt="">
-              <span>Connections</span>
+            <div class="nav-list-item d-flex justify-content-between">
+              <div class="nav-list-item-fp d-flex align-content-center">
+                <img src="@/static/img/User.svg" alt="">
+                <span>Connections</span>
+              </div>
+              <div class="connections-count connections-blue d-flex justify-content-between align-content-center">
+                47
+              </div>
             </div>
             <div class="nav-list-item">
               <img src="@/static/img/User.svg" alt="">
@@ -114,11 +124,10 @@
             <img src="@/static/img/DownStroke.svg" alt="">
           </div>
           <div class="thoughts-input-section">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea placeholder="Enter your message..." name="" id="" cols="30" rows="10"></textarea>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -297,6 +306,42 @@ export default {}
 }
 .thoughts-input-section textarea{
   padding: 24px 24px 12px;
+}
+.nav-list-price{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #A1A5AE;
+}
+.connections-count{
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 8px;
+  background-color: #EF4115;
+}
+.connections-count{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: #FFFFFF;
+}
+.connections-blue{
+  background-color: #26A69A;
+}
+.thoughts-input-section textarea{
+  resize: none;
+  outline: 1px solid #DDE0E6;
+  border: none;
+  height: 110px;
 }
 
 </style>
