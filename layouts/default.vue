@@ -66,6 +66,12 @@
 
 <script>
 
+export default{
+  mounted:function(){
+    this.$store.dispatch("startTimer");    /// запуск таймера
+  },
+
+}
 </script>
 
 <style scoped>

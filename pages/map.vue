@@ -47,9 +47,7 @@ export default {
         })
       });
     });
-
   },
-
 }
 
 
