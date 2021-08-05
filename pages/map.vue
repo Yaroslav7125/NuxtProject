@@ -1,8 +1,17 @@
 <template>
-  <div>
-    <div id="map"></div>
-  </div>
+  <div class="content-container">
+    <div class="map-box">
+      <div class="map-line">
+        <div class="map-caption d-flex justify-content-between">
+          <span>Basic map</span>
+          <img src="@/static/img/UpStroke.svg" alt="">
+        </div>
 
+      </div>
+      <div id="map"></div>
+
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,7 +36,31 @@ export default {
 
 <style>
 #map{
-  width: 1000px;
-  height: 1000px;
+  width: 100%;
+  height: 404px;
+}
+.content-container{
+  padding: 16px;
+
+
+
+}
+.map-box{
+  margin-top: 24px;
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #DDE0E6;
+}
+.map-caption span{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #2D2F33;
+}
+.map-caption{
+  margin-bottom: 16px;
 }
 </style>
