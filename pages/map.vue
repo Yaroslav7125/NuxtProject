@@ -17,18 +17,39 @@
 <script>
 import { Loader } from "@googlemaps/js-api-loader"
 export default {
+  data(){
+    return{
+      map:Object,
+    }
+  },
   mounted() {
     const loader = new Loader({
       apiKey: "AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU",
       version: "weekly",
     });
     loader.load().then(() => {
-       map = new google.maps.Map(document.getElementById("map"), {
+        this.map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
+        zoom: 17,
+      });
+      navigator.geolocation.getCurrentPosition((pos)=>{
+        let crd = pos.coords;
+        this.map.setCenter({
+          lat:crd.latitude,
+          lng:crd.longitude,
+        })
+        const marker = new google.maps.Marker({
+          position: {
+            lat:crd.latitude,
+            lng:crd.longitude,
+          },
+          map: this.map,
+        })
       });
     });
-  }
+
+  },
+
 }
 
 
