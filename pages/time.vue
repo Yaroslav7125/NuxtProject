@@ -4,7 +4,7 @@
       <div class="timer-content d-flex justify-content-between">
         <div class="timer-content-fp d-flex flex-column">
           <span>Timer</span>
-          <span class="time-count" id="time">{{getTime}}</span>
+          <span class="time-count" id="time">{{ getTime }}</span>
         </div>
         <div class="timer-content-sp">
           <img src="@/static/img/UpStroke.svg" alt="">
@@ -18,14 +18,14 @@
 export default {
   computed: {
     getTime: function () {
-      const sec = this.$store.state.time
-      const secStr = String(sec % 60).padStart(2, '0')
-      const minutesStr = String(Math.trunc(sec / 60)).padStart(2, '0')
-      const hoursStr = String(Math.trunc(sec / 3600)).padStart(2, '0')
-      return `${hoursStr}:${minutesStr}:${secStr}`
-    }
-  }
-}
+      const sec = this.$store.state.time;
+      const secStr = String(sec % 60).padStart(2, '0');
+      const minutesStr = String(Math.trunc(sec / 60)).padStart(2, '0');
+      const hoursStr = String(Math.trunc(sec / 3600)).padStart(2, '0');
+      return `${hoursStr}:${minutesStr}:${secStr}`;
+    },
+  },
+};
 </script>
 <style>
 .timer{

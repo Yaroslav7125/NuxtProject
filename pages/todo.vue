@@ -4,80 +4,79 @@
       <h1>My todo list!</h1>
       <AddTodo
         userInput="userInput"
-        v-on:updateUserInput  ="userInput = $event"
-        v-on:addTodo='PushTodo'
+        @updateUserInput="userInput = $event"
+        @addTodo="PushTodo"
       />
       <TodoList
-        v-bind:todos='filteredTodos'
-        v-on:deleteTodo="deleteTodo"
-        v-on:ChangeTodoCompleted="ChangeTodoCompleted"
-        v-on:changeTodoTitle="changeTodoTitle"
+        :todos="filteredTodos"
+        @deleteTodo="deleteTodo"
+        @ChangeTodoCompleted="ChangeTodoCompleted"
+        @changeTodoTitle="changeTodoTitle"
       />
     </div>
   </div>
-
 </template>
 
 <script>
-import TodoList from '@/components/TodoList.vue'
-import AddTodo from '@/components/AddTodo.vue'
+import TodoList from '@/components/TodoList.vue';
+import AddTodo from '@/components/AddTodo.vue';
 
 export default {
   name: 'App',
   components: {
     TodoList,
-    AddTodo
+    AddTodo,
   },
   data () {
     return {
       todos: [
         { id: 1, title: 'купить хлеп', completed: false },
         { id: 2, title: 'купить матрас', completed: false },
-        { id: 3, title: 'купить сено', completed: false }
+        { id: 3, title: 'купить сено', completed: false },
       ],
-      userInput: ''
-    }
+      userInput: '',
+    };
   },
   methods: {
     saveTodos () {
-      localStorage.setItem('todos', JSON.stringify(this.todos))
+      localStorage.setItem('todos', JSON.stringify(this.todos));
     },
     PushTodo (newTodo) {
-      this.todos.push(newTodo)
-      this.saveTodos() // сетим в local Storage
+      this.todos.push(newTodo);
+      this.saveTodos(); // сетим в local Storage
     },
     deleteTodo (id) {
-      this.todos = this.todos.filter(t => t.id !== id)
-      this.saveTodos() // сетим в local Storage
+      this.todos = this.todos.filter(t => t.id !== id);
+      this.saveTodos(); // сетим в local Storage
     },
     ChangeTodoCompleted (index) {
-      this.todos[index].completed = !this.todos[index].completed
-      this.saveTodos() // сетим при изм completed
+      this.todos[index].completed = !this.todos[index].completed;
+      this.saveTodos(); // сетим при изм completed
     },
     changeTodoTitle (index, StrTitle) {
-      this.todos[index].title = StrTitle
-      this.saveTodos()// сетим при изменении title
-    }
+      this.todos[index].title = StrTitle;
+      this.saveTodos();// сетим при изменении title
+    },
   },
 
   computed: {
     filteredTodos: function () {
       if (this.userInput != '') {
-        return this.todos.filter(t => t.title.includes(this.userInput))
+        return this.todos.filter(t => t.title.includes(this.userInput));
       } else {
-        return this.todos
+        return this.todos;
       }
-    }
+    },
   },
   mounted: function () {
     // eslint-disable-next-line no-lone-blocks
     {
       if (JSON.parse(localStorage.getItem('todos'))) {
-        this.todos = JSON.parse(localStorage.getItem('todos'))// читаем
-      } else localStorage.setItem('todos', JSON.stringify(this.todos))
+        this.todos = JSON.parse(localStorage.getItem('todos'));// читаем
+      } else localStorage.setItem('todos', JSON.stringify(this.todos));
     }
-  }
-}
+  },
+};
 
 </script>
 

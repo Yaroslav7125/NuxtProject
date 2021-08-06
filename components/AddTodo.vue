@@ -1,21 +1,23 @@
 <template>
-    <div class="container">
-            <div class="container-inner">
-                <input class='form-control' type="text" v-model='valueTodo'>
-                <button v-on:click='createTodo' class="btn btn-warning">Add</button>
-                 <input class='form-control form-control-search' :title='userInput' @input="$emit('updateUserInput', $event.target.value)" placeholder="Search..." type="text" >
-            </div>
+  <div class="container">
+    <div class="container-inner">
+      <input class="form-control" type="text" v-model="valueTodo">
+      <button @click="createTodo" class="btn btn-warning">
+        Add
+      </button>
+      <input class="form-control form-control-search" :title="userInput" @input="$emit('updateUserInput', $event.target.value)" placeholder="Search..." type="text">
     </div>
+  </div>
 </template>
 <script>
 export default {
   props: {
-    userInput: String
+    userInput: String,
   },
   data () {
     return {
-      valueTodo: ''
-    }
+      valueTodo: '',
+    };
   },
   methods: {
     createTodo () {
@@ -23,14 +25,14 @@ export default {
         const NewTodo = {
           id: Date.now(),
           title: this.valueTodo,
-          completed: false
-        }
-        this.$emit('addTodo', NewTodo)
+          completed: false,
+        };
+        this.$emit('addTodo', NewTodo);
       }
-      this.valueTodo = ''
-    }
-  }
-}
+      this.valueTodo = '';
+    },
+  },
+};
 </script>
 <style scoped>
 .container{

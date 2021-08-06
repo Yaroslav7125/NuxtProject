@@ -26,12 +26,13 @@
             </div>
             <div class="comments-first-section">
               <div class="comment">
-                  <div class="comment-text">
-                    <p>The sun disappearing behind the Himalayas. This was taken from near the
-                      Tungnath temple (~3500m) in the Garwhal Himalayas near Chopta.
-                      I think this is probably my favourite of all of the sunset photos
-                    </p>
-                  </div>
+                <div class="comment-text">
+                  <p>
+                    The sun disappearing behind the Himalayas. This was taken from near the
+                    Tungnath temple (~3500m) in the Garwhal Himalayas near Chopta.
+                    I think this is probably my favourite of all of the sunset photos
+                  </p>
+                </div>
                 <div class="comment-author-data">
                   <span>— Kirill, 10:39 am</span>
                 </div>
@@ -43,7 +44,7 @@
                     <span>438</span>
                     <img src="@/static/img/comment_line.svg" alt="">
                     <span>71</span>
-                  </div >
+                  </div>
                 </div>
                 <div class="post-last-line-sp">
                   <span>Read post</span>
@@ -133,7 +134,6 @@
 </template>
 
 <script>
-export default {}
 </script>
 <style scoped>
 .post-screen{

@@ -1,77 +1,77 @@
 <template>
-<div class="header-content">
-  <div class="d-flex justify-content-between first__part__header">
-    <div class="fph-first-part link">
-      <img src="@/static/img/stroke.svg" alt="">
-      <span class="fph-span">User Pages</span>
+  <div class="header-content">
+    <div class="d-flex justify-content-between first__part__header">
+      <div class="fph-first-part link">
+        <img src="@/static/img/stroke.svg" alt="">
+        <span class="fph-span">User Pages</span>
+      </div>
+      <div class="fph-second-part d-flex align-content-center">
+        <img src="@/static/img/small_bell.svg" alt="">
+        <img src="@/static/img/User.svg" alt="">
+      </div>
     </div>
-    <div class="fph-second-part d-flex align-content-center">
-        <img  src="@/static/img/small_bell.svg" alt="">
-        <img  src="@/static/img/User.svg" alt="">
-    </div>
-  </div>
-  <div class="d-flex justify-content-between second-part-h">
-    <div class="first-part d-flex  ">
-      <nuxt-link exact no-prefetch active-class="active" to="/">
-        <div class="link link-sph">
-          <img src="@/static/img/Activity.svg" alt="">
-          <span class="sph-link">Activity</span>
-        </div>
-      </nuxt-link>
-      <nuxt-link no-prefetch active-class="active" to="/map">
-        <div class="link link-sph">
-          <img src="@/static/img/Calendar.svg" alt="">
-          <span class="sph-link">Map</span>
-        </div>
-      </nuxt-link>
+    <div class="d-flex justify-content-between second-part-h">
+      <div class="first-part d-flex  ">
+        <nuxt-link exact no-prefetch active-class="active" to="/">
+          <div class="link link-sph">
+            <img src="@/static/img/Activity.svg" alt="">
+            <span class="sph-link">Activity</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link no-prefetch active-class="active" to="/map">
+          <div class="link link-sph">
+            <img src="@/static/img/Calendar.svg" alt="">
+            <span class="sph-link">Map</span>
+          </div>
+        </nuxt-link>
 
-      <nuxt-link no-prefetch active-class="active" to="/time">
-        <div class="link link-sph">
-          <img src="@/static/img/Gear.svg" alt="">
-          <span class="sph-link">Time</span>
-        </div>
-      </nuxt-link>
-      <nuxt-link no-prefetch active-class="active" to="/todo">
+        <nuxt-link no-prefetch active-class="active" to="/time">
+          <div class="link link-sph">
+            <img src="@/static/img/Gear.svg" alt="">
+            <span class="sph-link">Time</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link no-prefetch active-class="active" to="/todo">
+          <div class="link link-sph">
+            <img src="@/static/img/List.svg" alt="">
+            <span class="sph-link">Todo list</span>
+          </div>
+        </nuxt-link>
+      </div>
+      <div class="second-part d-flex">
         <div class="link link-sph">
           <img src="@/static/img/List.svg" alt="">
-          <span class="sph-link">Todo list</span>
+          <span>Notes</span>
         </div>
-      </nuxt-link>
-    </div>
-    <div class="second-part d-flex">
-      <div class="link link-sph">
-        <img src="@/static/img/List.svg" alt="">
-        <span>Notes</span>
-      </div>
-      <div class="link link-sph">
-        <img src="@/static/img/User.svg" alt="">
-        <span>Friends</span>
-      </div>
-      <div class="link link-sph">
-        <img src="@/static/img/User.svg" alt="">
-        <span>Photos</span>
-      </div>
-      <div class="link link-sph">
-        <img src="@/static/img/Gear.svg" alt="">
-        <img src="@/static/img/DownStroke.svg" alt="">
+        <div class="link link-sph">
+          <img src="@/static/img/User.svg" alt="">
+          <span>Friends</span>
+        </div>
+        <div class="link link-sph">
+          <img src="@/static/img/User.svg" alt="">
+          <span>Photos</span>
+        </div>
+        <div class="link link-sph">
+          <img src="@/static/img/Gear.svg" alt="">
+          <img src="@/static/img/DownStroke.svg" alt="">
         <!-- next Photos -->
+        </div>
       </div>
     </div>
+    <div class="main-content">
+      <nuxt />                    <!-- content -->
+    </div>
   </div>
-  <div class="main-content">
-    <nuxt/>                    <!-- content -->
-  </div>
-</div>
 </template>
 
 <script>
 
 export default {
   mounted: function () {
-    this.$store.dispatch('startTimer') /// запуск таймера
-  }
+    this.$store.dispatch('startTimer'); /// запуск таймера
+  },
 
-}
+};
 </script>
 
 <style scoped>

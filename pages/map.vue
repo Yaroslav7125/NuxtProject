@@ -13,41 +13,41 @@
 </template>
 
 <script>
-import { Loader } from '@googlemaps/js-api-loader'
+import { Loader } from '@googlemaps/js-api-loader';
 export default {
   data () {
     return {
-      map: Object
-    }
+      map: Object,
+    };
   },
   mounted () {
     const loader = new Loader({
       apiKey: 'AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU',
-      version: 'weekly'
-    })
+      version: 'weekly',
+    });
     loader.load().then(() => { // eslint-disable-next-line
       this.map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },
-        zoom: 17
-      })
+        zoom: 17,
+      });
       navigator.geolocation.getCurrentPosition((pos) => {
-        const crd = pos.coords
+        const crd = pos.coords;
         this.map.setCenter({
           lat: crd.latitude,
-          lng: crd.longitude
-        })
+          lng: crd.longitude,
+        });
         // eslint-disable-next-line
         new google.maps.Marker({
           position: {
             lat: crd.latitude,
-            lng: crd.longitude
+            lng: crd.longitude,
           },
-          map: this.map
-        })
-      })
-    })
-  }
-}
+          map: this.map,
+        });
+      });
+    });
+  },
+};
 
 </script>
 
