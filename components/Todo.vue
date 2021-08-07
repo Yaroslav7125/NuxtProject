@@ -30,7 +30,7 @@ export default {
       this.$emit('ChangeTodo');
     },
     changeCompleted () {
-      this.$emit('ChangeTodoCompleted', this.index);
+      this.$emit('changeTodoCompleted', this.index);
     },
     changeTodoTitle (StrTitle) {
       this.$emit('changeTodoTitle', this.index, StrTitle);

@@ -4,9 +4,10 @@
       v-for="(todo, index) in todos"
       :todo="todo"
       :index="index"
+      :key="todo.id"
       @deleteTodo="deleteTodo"
       @changeTodoTitle="changeTodoTitle"
-      @ChangeTodoCompleted="ChangeTodoCompleted"
+      @ChangeTodoCompleted="changeTodoCompleted"
     />
   </div>
 </template>
