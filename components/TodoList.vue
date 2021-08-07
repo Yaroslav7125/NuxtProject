@@ -7,7 +7,7 @@
       :key="todo.id"
       @deleteTodo="deleteTodo"
       @changeTodoTitle="changeTodoTitle"
-      @ChangeTodoCompleted="changeTodoCompleted"
+      @changeTodoCompleted="changeTodoCompleted"
     />
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
       ///
       this.$emit('changeTodoTitle', index, StrTitle);
     },
-    ChangeTodoCompleted (index) {
+    changeTodoCompleted (index) {
       this.$emit('ChangeTodoCompleted', index);
     },
   },

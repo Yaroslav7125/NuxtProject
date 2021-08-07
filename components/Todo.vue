@@ -6,7 +6,7 @@
         {{ (index+1) + ' '+ todo.title }}
       </h2>
       <input class="form-control" :value="todo.title" v-else type="text" @input="changeTodoTitle($event.target.value) ">
-      <button class="btn btn-primary" @click="ChangeEditTodos()">
+      <button class="btn btn-primary" @click="changeEditTodos()">
         Edit
       </button>
       <button @click="deleteTodo" class="btn btn-outline-dark">
@@ -25,7 +25,7 @@ export default {
     };
   },
   methods: {
-    ChangeEditTodos () {
+    changeEditTodos () {
       this.editTodo = !this.editTodo;
       this.$emit('ChangeTodo');
     },

@@ -38,7 +38,6 @@ export default {
 .container{
     display: flex;
     justify-content: center;
-
 }
 .container-inner{
     display: flex;
@@ -60,5 +59,4 @@ export default {
  .btn{
      margin: 15px ;
  }
-
 </style>
