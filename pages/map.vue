@@ -25,8 +25,8 @@ export default {
       apiKey: 'AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU',
       version: 'weekly',
     });
-    loader.load().then(() => { // eslint-disable-next-line
-      this.map = new google.maps.Map(document.getElementById('map'), {
+    loader.load().then((google) => {
+        this.map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 17,
       });
