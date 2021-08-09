@@ -5,12 +5,12 @@
       <AddTodo
         userInput="userInput"
         @updateUserInput="userInput = $event"
-        @addTodo="PushTodo"
+        @addTodo="pushTodo"
       />
       <TodoList
         :todos="filteredTodos"
         @deleteTodo="deleteTodo"
-        @ChangeTodoCompleted="ChangeTodoCompleted"
+        @сhangeTodoCompleted="changeTodoCompleted"
         @changeTodoTitle="changeTodoTitle"
       />
     </div>
@@ -41,7 +41,7 @@ export default {
     saveTodos () {
       localStorage.setItem('todos', JSON.stringify(this.todos));
     },
-    PushTodo (newTodo) {
+    pushTodo (newTodo) {
       this.todos.push(newTodo);
       this.saveTodos(); // сетим в local Storage
     },
@@ -49,7 +49,7 @@ export default {
       this.todos = this.todos.filter(t => t.id !== id);
       this.saveTodos(); // сетим в local Storage
     },
-    ChangeTodoCompleted (index) {
+    changeTodoCompleted (index) {
       this.todos[index].completed = !this.todos[index].completed;
       this.saveTodos(); // сетим при изм completed
     },
