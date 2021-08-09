@@ -1,7 +1,5 @@
-import Vue from 'vue';// eslint-disable-line
 import Vuex from 'vuex';// eslint-disable-line
 
-Vue.use(Vuex);
 const store = () => new Vuex.Store({// eslint-disable-line
   state: {
     time: 0,

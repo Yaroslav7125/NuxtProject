@@ -15,24 +15,20 @@
 <script>
 import { Loader } from '@googlemaps/js-api-loader';
 export default {
-  data () {
-    return {
-      map: Object,
-    };
-  },
   mounted () {
     const loader = new Loader({
       apiKey: 'AIzaSyC0dy2XqP-GPUFSTeGTKpkmT55k9GdHzxU',
       version: 'weekly',
     });
+    let map;
     loader.load().then((google) => {
-        this.map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 17,
       });
       navigator.geolocation.getCurrentPosition((pos) => {
         const crd = pos.coords;
-        this.map.setCenter({
+          map.setCenter({
           lat: crd.latitude,
           lng: crd.longitude,
         });
@@ -42,7 +38,7 @@ export default {
             lat: crd.latitude,
             lng: crd.longitude,
           },
-          map: this.map,
+          map,
         });
       });
     });
