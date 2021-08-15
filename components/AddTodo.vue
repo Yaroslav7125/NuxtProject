@@ -34,29 +34,29 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 .container{
     display: flex;
     justify-content: center;
+    .container-inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 20px;
+      border:1px solid grey;
+      margin: 5px;
+      border-radius: 3px;
+      background-color: #fff;
+      .form-control{
+        width: 500px;
+      }
+      .form-control-search{
+        width: 100px;
+        margin-right: 15px;
+     }
+      .btn{
+        margin: 15px ;
+      }
+  }
 }
-.container-inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    border:1px solid grey;
-    margin: 5px;
-    border-radius: 3px;
-  background-color: #fff;
-}
-.form-control{
-     width: 500px;
- }
- .form-control-search{
-     width: 100px;
-     margin-right: 15px;
- }
- .btn{
-     margin: 15px ;
- }
 </style>

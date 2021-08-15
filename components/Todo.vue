@@ -42,33 +42,33 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
  .container{
      display: flex;
      justify-content: center;
- }
- .container-inner{
-   display: flex;
-   align-items: center;
-   border:1px solid grey;
-   margin: 5px;
-   border-radius: 8px;
-   background-color: #fff;
- }
- .form-control{
-     width: 500px;
- }
- .btn{
-     margin: 15px ;
- }
- h2{
-     width: 500px;
- }
- .checkbox{
-     margin: 15px;
-     width: 100px;
- }
- .done{
-     text-decoration: line-through;
+     .container-inner{
+       display: flex;
+       align-items: center;
+       border:1px solid grey;
+       margin: 5px;
+       border-radius: 8px;
+       background-color: #fff;
+       .checkbox{
+         margin: 15px;
+         width: 100px;
+       }
+       .form-control{
+         width: 500px;
+       }
+       .btn{
+          margin: 15px ;
+       }
+       h2{
+         width: 500px;
+       }
+       .done{
+         text-decoration: line-through;
+       }
+    }
  }
 </style>

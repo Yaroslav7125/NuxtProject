@@ -135,17 +135,15 @@
 
 <script>
 </script>
-<style scoped>
+<style scoped lang="scss">
 .post-screen{
   background-color: #fff;
   margin-top: 24px;
-}
-.main-screen-first-part{
-  width: 100%;
-}
-.post-screen{
   padding: 16px;
   border: 1px solid #DDE0E6;
+  width: 100%;
+}
+.main-screen-first-part{
   width: 100%;
 }
 .post-fp-right-part{

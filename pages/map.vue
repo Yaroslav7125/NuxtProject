@@ -46,31 +46,30 @@ export default {
 
 </script>
 
-<style>
+<style scoped lang="scss">
 .map{
   width: 100%;
   height: 404px;
 }
 .content-container{
   padding: 16px;
-
-}
-.map-box{
-  margin-top: 24px;
-  background-color: #fff;
-  padding: 16px;
-  border: 1px solid #DDE0E6;
-}
-.map-caption span{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.005em;
-  color: #2D2F33;
-}
-.map-caption{
-  margin-bottom: 16px;
+  .map-box{
+    margin-top: 24px;
+    background-color: #fff;
+    padding: 16px;
+    border: 1px solid #DDE0E6;
+    .map-caption {
+      margin-bottom: 16px;
+        span{
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.005em;
+          color: #2D2F33;
+      }
+    }
+  }
 }
 </style>
