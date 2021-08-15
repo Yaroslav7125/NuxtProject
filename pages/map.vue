@@ -7,7 +7,7 @@
           <img src="@/static/img/UpStroke.svg" alt="">
         </div>
       </div>
-      <div id="map"></div>
+      <div class="map"></div>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     });
     let map;
     loader.load().then((google) => {
-        map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.querySelector('.map'), {
         center: { lat: -34.397, lng: 150.644 },
         zoom: 17,
       });
@@ -47,8 +47,8 @@ export default {
 
 </script>
 
-<style scoped>
-#map{
+<style>
+.map{
   width: 100%;
   height: 404px;
 }
