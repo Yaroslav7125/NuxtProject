@@ -7,7 +7,7 @@
           <span class="time-count" id="time">{{ getTime }}</span>
         </div>
         <div class="timer-content-sp">
-          <img src="@/static/img/UpStroke.svg" alt="">
+          <img src="/img/UpStroke.svg" alt="">
         </div>
       </div>
     </div>

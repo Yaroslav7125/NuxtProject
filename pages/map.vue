@@ -4,7 +4,7 @@
       <div class="map-line">
         <div class="map-caption d-flex justify-content-between">
           <span>Basic map</span>
-          <img src="@/static/img/UpStroke.svg" alt="">
+          <img src="/img/UpStroke.svg" alt="">
         </div>
       </div>
       <div class="map"></div>

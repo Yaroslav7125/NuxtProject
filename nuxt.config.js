@@ -30,8 +30,6 @@ export default {
   css: [
     'bootstrap/dist/css/bootstrap.min.css',
     '~/static/css/main.css',
-    '~/static/css/font1.css',
-    '~/static/css/font2.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

@@ -9,18 +9,18 @@
                 <span>Himalayan sunset</span>
               </div>
               <div class="post-fp-right-part d-flex align-items-center">
-                <img src="@/static/img/DoneBadge.svg" alt="">
+                <img src="/img/DoneBadge.svg" alt="">
                 <span>49 minutes ago</span>
-                <img src="@/static/img/UpStroke.svg" alt="">
+                <img src="/img/UpStroke.svg" alt="">
               </div>
             </div>
             <div class="post-content-img">
-              <img src="@/static/img/SunsetImage.png" alt="">
+              <img src="/img/SunsetImage.png" alt="">
             </div>
           </div>
           <div class="post-screen-comments">
             <div class="comment-author-line">
-              <img src="@/static/img/comment_line.svg" alt="">
+              <img src="/img/comment_line.svg" alt="">
               <a href="#"><span>Kirill Dashkevich</span></a>
               <span>commented:</span>
             </div>
@@ -40,15 +40,15 @@
               <div class="comments-second-section d-flex justify-content-between">
                 <div class="post-last-line-fp d-flex align-items-center">
                   <div class="d-flex align-items-center">
-                    <img src="@/static/img/eye.svg" alt="">
+                    <img src="/img/eye.svg" alt="">
                     <span>438</span>
-                    <img src="@/static/img/comment_line.svg" alt="">
+                    <img src="/img/comment_line.svg" alt="">
                     <span>71</span>
                   </div>
                 </div>
                 <div class="post-last-line-sp">
                   <span>Read post</span>
-                  <img src="@/static/img/right_stroke.svg" alt="">
+                  <img src="/img/right_stroke.svg" alt="">
                 </div>
               </div>
             </div>
@@ -59,41 +59,41 @@
             Conservation with James
           </div>
           <div class="last-line-sp">
-            <img src="@/static/img/DownStroke.svg" alt="">
+            <img src="/img/DownStroke.svg" alt="">
           </div>
         </div>
       </div>
       <div class="main-screen-second-part d-flex flex-column ">
         <div class="personal-card d-flex flex-column align-items-center">
-          <img src="@/static/img/pain.svg" alt="">
+          <img src="/img/pain.svg" alt="">
           <span class="personal-card-name">Harold Pain </span>
           <span class="personal-card-prof">UX/UI designer</span>
           <div class="vk-badge">
-            <img src="@/static/img/vk.svg" alt="">
-            <img src="@/static/img/vk.svg" alt="">
-            <img src="@/static/img/vk.svg" alt="">
+            <img src="/img/vk.svg" alt="">
+            <img src="/img/vk.svg" alt="">
+            <img src="/img/vk.svg" alt="">
           </div>
         </div>
         <div class="personal-nav-bar">
           <div class="nav-bar-box d-flex justify-content-between">
             <span>Navigation</span>
-            <img src="@/static/img/DownStroke.svg" alt="">
+            <img src="/img/DownStroke.svg" alt="">
           </div>
           <div class="nav-list">
             <div class="nav-list-item">
-              <img src="@/static/img/User.svg" alt="">
+              <img src="/img/User.svg" alt="">
               <span>My profile</span>
             </div>
             <div class="nav-list-item d-flex align-content-center justify-content-between">
               <div class=" d-flex align-content-center">
-                <img src="@/static/img/User.svg" alt="">
+                <img src="/img/User.svg" alt="">
                 <span>Balance</span>
               </div>
               <span class="nav-list-price">$1,456</span>
             </div>
             <div class="nav-list-item d-flex justify-content-between">
               <div class="nav-list-item-fp d-flex align-content-center">
-                <img src="@/static/img/User.svg" alt="">
+                <img src="/img/User.svg" alt="">
                 <span>Connections</span>
               </div>
               <div class="connections-count  d-flex justify-content-between align-content-center">
@@ -101,12 +101,12 @@
               </div>
             </div>
             <div class="nav-list-item hr-line">
-              <img src="@/static/img/User.svg" alt="">
+              <img src="/img/User.svg" alt="">
               <span>Friends</span>
             </div>                             <!-- connections and account settings -->
             <div class="nav-list-item d-flex justify-content-between">
               <div class="nav-list-item-fp d-flex align-content-center">
-                <img src="@/static/img/User.svg" alt="">
+                <img src="/img/User.svg" alt="">
                 <span>Connections</span>
               </div>
               <div class="connections-count connections-blue d-flex justify-content-between align-content-center">
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div class="nav-list-item">
-              <img src="@/static/img/User.svg" alt="">
+              <img src="/img/User.svg" alt="">
               <span>Account settings</span>
             </div>
           </div>
@@ -122,7 +122,7 @@
         <div class="second-part-thoughts">
           <div class="thoughts-line-nav hr-line d-flex justify-content-between">
             <span>Share yuor thoughts</span>
-            <img src="@/static/img/DownStroke.svg" alt="">
+            <img src="/img/DownStroke.svg" alt="">
           </div>
           <div class="thoughts-input-section">
             <textarea placeholder="Enter your message..." name="" id="" cols="30" rows="10"></textarea>
