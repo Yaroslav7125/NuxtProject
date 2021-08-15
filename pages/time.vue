@@ -27,7 +27,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .timer{
  padding: 24px 32px;
 }
