@@ -32,7 +32,6 @@ export default {
           lat: crd.latitude,
           lng: crd.longitude,
         });
-        // eslint-disable-next-line
         new google.maps.Marker({
           position: {
             lat: crd.latitude,
