@@ -8,11 +8,7 @@ export default {
     htmlAttrs: {
       lang: 'en',
     },
-    script: [
-      {
-        src: 'https://maps.api.2gis.ru/2.0/loader.js?pkg=full&lazy=true',
-      },
-    ],
+    script: [],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
