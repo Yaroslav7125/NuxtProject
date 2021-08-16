@@ -20,6 +20,7 @@
 <script>
 import TodoList from '@/components/TodoList.vue';
 import AddTodo from '@/components/AddTodo.vue';
+import axios from 'axios';
 
 export default {
   name: 'App',
@@ -29,38 +30,40 @@ export default {
   },
   data () {
     return {
-      todos: [
-        { id: 1, title: 'купить хлеп', completed: false },
-        { id: 2, title: 'купить матрас', completed: false },
-        { id: 3, title: 'купить сено', completed: false },
-      ],
+      todos: [],
       userInput: '',
     };
   },
   methods: {
-    saveTodos () {
-      localStorage.setItem('todos', JSON.stringify(this.todos));
-    },
-    pushTodo (newTodo) {
-      this.todos.push(newTodo);
-      this.saveTodos(); // сетим в local Storage
+    async pushTodo (newTodo) {
+      axios.post('http://localhost:3001/tasks', newTodo).then((resp)=>{
+        axios.get('http://localhost:3001/tasks').then((response)=>{
+          this.todos = response.data;
+        });
+      });
     },
     deleteTodo (id) {
-      this.todos = this.todos.filter(t => t.id !== id);
-      this.saveTodos(); // сетим в local Storage
+      axios.delete(`http://localhost:3001/tasks/${id}`).then(()=>{
+        this.todos = this.todos.filter(t => t.id !== id);
+      });
     },
-    changeTodoCompleted (index) {
-      this.todos[index].completed = !this.todos[index].completed;
-      this.saveTodos(); // сетим при изм completed
+    changeTodoCompleted (id) {
+      let todo = this.todos.filter((todo)=>todo.id == id);
+      axios.put(`http://localhost:3001/tasks/change-completed/${id}`, {todoCompleted:!todo[0].completed}).then(()=>{
+        todo[0].completed = !todo[0].completed;
+      });
     },
-    changeTodoTitle (index, StrTitle) {
-      this.todos[index].title = StrTitle;
-      this.saveTodos();// сетим при изменении title
+    changeTodoTitle (id, strTitle) {
+
+      let index  = this.todos.findIndex((elm)=> elm.id == id);
+      axios.put(`http://localhost:3001/tasks/change-title/${id}`, {strTitle:strTitle}).then(()=>{
+        this.todos[index].title = strTitle;
+      });
     },
   },
-
   computed: {
     filteredTodos: function () {
+      this.todos.sort((todo1, todo2) => todo1.id > todo2.id ? 1 : -1); // сортируем тудушки
       if (this.userInput != '') {
         return this.todos.filter(t => t.title.includes(this.userInput));
       } else {
@@ -69,15 +72,11 @@ export default {
     },
   },
   mounted: function () {
-    // eslint-disable-next-line no-lone-blocks
-    {
-      if (JSON.parse(localStorage.getItem('todos'))) {
-        this.todos = JSON.parse(localStorage.getItem('todos'));// читаем
-      } else localStorage.setItem('todos', JSON.stringify(this.todos));
-    }
+    axios.get('http://localhost:3001/tasks').then((response)=>{
+      this.todos = response.data;
+    });
   },
 };
-
 </script>
 
 <style scoped lang="scss">
