@@ -44,14 +44,12 @@ export default {
     },
     deleteTodo (id) {
       axios.delete(`http://localhost:3001/tasks/${id}`).then((resp)=>{
-        console.log(resp);
         this.todos = this.todos.filter(t => t.id !== id);
       });
     },
     changeTodoCompleted (todo) {
       //let todo = this.todos.filter((todo)=>todo.id == todo);
       axios.put(`http://localhost:3001/tasks/change-completed/${todo.id}`, {todoCompleted:!todo.completed}).then((resp)=>{
-        console.log(resp);
         todo.completed = resp.data.completed;
       });
     },
