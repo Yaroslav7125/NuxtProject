@@ -43,21 +43,23 @@ export default {
       });
     },
     deleteTodo (id) {
-      axios.delete(`http://localhost:3001/tasks/${id}`).then(()=>{
+      axios.delete(`http://localhost:3001/tasks/${id}`).then((resp)=>{
+        console.log(resp);
         this.todos = this.todos.filter(t => t.id !== id);
       });
     },
-    changeTodoCompleted (id) {
-      let todo = this.todos.filter((todo)=>todo.id == id);
-      axios.put(`http://localhost:3001/tasks/change-completed/${id}`, {todoCompleted:!todo[0].completed}).then(()=>{
-        todo[0].completed = !todo[0].completed;
+    changeTodoCompleted (todo) {
+      //let todo = this.todos.filter((todo)=>todo.id == todo);
+      axios.put(`http://localhost:3001/tasks/change-completed/${todo.id}`, {todoCompleted:!todo.completed}).then((resp)=>{
+        console.log(resp);
+        todo.completed = resp.data.completed;
       });
     },
     changeTodoTitle (id, strTitle) {
-
-      let index  = this.todos.findIndex((elm)=> elm.id == id);
-      axios.put(`http://localhost:3001/tasks/change-title/${id}`, {strTitle:strTitle}).then(()=>{
-        this.todos[index].title = strTitle;
+      axios.put(`http://localhost:3001/tasks/change-title/${id}`, {strTitle:strTitle}).then((resp)=>{
+        console.log(resp);
+        let index  = this.todos.findIndex((elm)=> elm.id == id);
+        this.todos[index] = resp.data;
       });
     },
   },

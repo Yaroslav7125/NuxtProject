@@ -34,7 +34,7 @@ export default {
       this.editTitle = this.todo.title;
     },
     changeCompleted () {
-      this.$emit('changeTodoCompleted', this.todo.id);
+      this.$emit('changeTodoCompleted', this.todo);
     },
     changeTodoTitle (StrTitle) {
       this.editTitle = StrTitle;
