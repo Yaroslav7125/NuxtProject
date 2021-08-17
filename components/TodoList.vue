@@ -23,8 +23,8 @@ export default {
     deleteTodo (id) {
       this.$emit('deleteTodo', id);
     },
-    changeTodoTitle (id, StrTitle) {
-      this.$emit('changeTodoTitle', id, StrTitle);
+    changeTodoTitle (todo, StrTitle) {
+      this.$emit('changeTodoTitle', todo, StrTitle);
     },
     changeTodoCompleted (todo) {
       this.$emit('сhangeTodoCompleted', todo);

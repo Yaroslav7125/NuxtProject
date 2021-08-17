@@ -28,7 +28,7 @@ export default {
   methods: {
     changeEditTodos () {
       if(this.editTodo){
-        this.$emit('changeTodoTitle', this.todo.id, this.editTitle);
+        this.$emit('changeTodoTitle', this.todo, this.editTitle);
       }
       this.editTodo = !this.editTodo;
       this.editTitle = this.todo.title;

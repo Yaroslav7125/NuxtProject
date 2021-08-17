@@ -53,11 +53,9 @@ export default {
         todo.completed = resp.data.completed;
       });
     },
-    changeTodoTitle (id, strTitle) {
-      axios.put(`http://localhost:3001/tasks/change-title/${id}`, {strTitle:strTitle}).then((resp)=>{
-        console.log(resp);
-        let index  = this.todos.findIndex((elm)=> elm.id == id);
-        this.todos[index] = resp.data;
+    changeTodoTitle (todo, strTitle) {
+      axios.put(`http://localhost:3001/tasks/change-title/${todo.id}`, {strTitle:strTitle}).then((resp)=>{
+        todo.title = resp.data.title;
       });
     },
   },
