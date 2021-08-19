@@ -1,17 +1,17 @@
 <template>
-  <div className='todo-content'>
-    <div id='app'>
+  <div class="todo-content">
+    <div id="app">
       <h1>My todo list!</h1>
       <AddTodo
-        userInput='userInput'
-        @updateUserInput='userInput = $event'
-        @addTodo='pushTodo'
+        userInput="userInput"
+        @updateUserInput="userInput = $event"
+        @addTodo="pushTodo"
       />
       <TodoList
-        :todos='filteredTodos'
-        @deleteTodo='deleteTodo'
-        @сhangeTodoCompleted='changeTodoCompleted'
-        @changeTodoTitle='changeTodoTitle'
+        :todos="filteredTodos"
+        @deleteTodo="deleteTodo"
+        @сhangeTodoCompleted="changeTodoCompleted"
+        @changeTodoTitle="changeTodoTitle"
       />
     </div>
   </div>
@@ -80,20 +80,15 @@ export default {
 };
 </script>
 
-<style scoped lang='scss'>
-.todo-content {
+<style scoped lang="scss">
+.todo-content{
   padding-top: 24px;
-  h1{
-    margin: auto;
-    color: red;
-  }
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-
   }
 }
 </style>
