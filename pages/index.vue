@@ -134,6 +134,8 @@
 </template>
 
 <script>
+console.log('tut');
+console.log(process.env.NODE_ENV);
 </script>
 <style scoped lang="scss">
 .post-screen{

@@ -21,10 +21,7 @@
 import TodoList from '@/components/TodoList.vue';
 import AddTodo from '@/components/AddTodo.vue';
 import axios from 'axios';
-//import * as dotenv from 'dotenv';
-//dotenv.config();
-//
-axios.defaults.baseURL = process.env.BASE_URL||'http://localhost:3001/';
+axios.defaults.baseURL = process.env.baseUrl;
 export default {
   name: 'App',
   components: {
